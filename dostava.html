@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dostava</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="plugin/letItSnow.js" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(function launchSnowflakes() {
+            $('#snowspawner').letItSnow({
+                fall_time: 5000
+            });
+        })
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="images/ferdi-02.png" alt="">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Početna</a></li>
+                    <li><a href="onama.html">O nama</a></li>
+                    <li><a href="proizvodi.html">Proizvodi</a></li>
+                    <li><a href="recept.html">Recept</a></li>
+                    <li><a href="dostava.html">Dostava</a></li>
+
+                </ul>
+            </nav>
+        </header>
+
+
+        <div id="clockBox">
+            <h3>10% popusta na prvu porudžbinu u narednih nedelju dana!</h3>
+            <div id="odbrojavanje">
+                <div>
+                    <span class="dani"></span>
+                    <div class="tekstic">Dana</div>
+                </div>
+                <div>
+                    <span class="sati"></span>
+                    <div class="tekstic">Sata</div>
+                </div>
+                <div>
+                    <span class="minuti"></span>
+                    <div class="tekstic">Minuta</div>
+                </div>
+                <div>
+                    <span class="sekunde"></span>
+                    <div class="tekstic">Sekundi</div>
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+        <div class="contentDostava">
+            <h1>Dostava</h1>
+            <p>Prve i najukusnije knedle u Beogradu su tvoje u samo par klikova! Istraži ukuse i naruči slatki
+                užitak!<br />
+                Izaberi svoju knedlu i započni dan sa osmehom!<br />
+                Mi ćemo se postarati da knedle brzo stignu do tvog toplog doma našim Ferdinand autom!<br />
+            </p>
+            <aside>
+                <figure>
+                    <img src="images/slika8.jpg" id="dostavaSlika" alt="slika auta" />
+                </figure>
+            </aside>
+
+            <form name="forma" onsubmit="return validacija()">
+                <fieldset>
+                    <legend>Personalne informacije</legend>
+                    Ime i prezime:<br />
+                    <input type="text" name="ime" size="40"><br />
+                    Email Adresa:<br />
+                    <input type="email" name="email" placeholder="unesite validnu email adresu" size="40" /><br />
+                    Adresa:<br />
+                    <input type="text" name="adresa" size="80"><br />
+                </fieldset>
+                <fieldset>
+                    <legend><b>Informacije o knedlama</b></legend>
+
+
+                    Odaberite slatke knedle koje želite:<br />
+                    <input type="checkbox" id="knedla1" name="sljive" value="sljive" />Knedla sa šljivama, 95 RSD<br />
+                    <input type="checkbox" id="knedla2" name="kajsije" value="kajsije" />Knedla sa kajsijama, 120
+                    RSD<br />
+                    <input type="checkbox" id="knedla3" name="mak" value="mak" />Knedla sa makom, 130 RSD<br />
+                    <input type="checkbox" id="knedla4" name="nutela" value="nutela" />Knedla sa nutelom, 135 RSD<br />
+                    <input type="checkbox" id="knedla5" name="slatkisir" value="slatkisir" />Knedla sa slatkim sirom i
+                    malinama, 140
+                    RSD<br />
+                    <input type="checkbox" id="knedla6" name="oreo" value="oreo" />Malina-oreo knedla, 140 RSD<br />
+                    <input type="checkbox" id="knedla7" name="ribizla" value="ribizla" />Crna ribizla knedla, 140
+                    RSD<br />
+                    <input type="checkbox" id="knedla8" name="amareti" value="amareti" />Amareti knedla, 150 RSD<br />
+                    <input type="checkbox" id="knedla9" name="karamela" value="karamela" />Knedla karamela, kikiriki,
+                    160 RSD<br />
+                    <input type="checkbox" id="knedla10" name="pistaci" value="pistaci" />Knedla sa pistaćima i malinom,
+                    170 RSD<br />
+                    <input type="checkbox" id="knedla11" name="carska" value="carska" />Carska knedla, 180 RSD<br />
+                    <input type="checkbox" id="knedla12" name="jagoda" value="jagoda" />Šumska jagoda, 190 RSD<br />
+                    <input type="checkbox" id="knedla13" name="mala" value="mala" />Slatka mala knedla, 140 RSD<br />
+                    <input type="checkbox" id="knedla14" name="orah" value="orah" />Knedla orah grilijaš, 170 RSD<br />
+
+                    <br />
+                    Odaberite slane knedle koje želite:<br />
+                    <input type="checkbox" id="knedla15" name="sir" value="sir" />Knedla sa četiri vrste sira, 100
+                    RSD<br />
+                    <input type="checkbox" id="knedla16" name="pecurke" value="pecurke" />Knedla sa pečurkama i uljem od
+                    tartufa, 100
+                    RSD<br />
+                    <input type="checkbox" id="knedla17" name="spanac" value="spanac" />Knedla sa spanaćem i mocarelom,
+                    120 RSD<br />
+                    <input type="checkbox" id="knedla18" name="prsuta" value="prsuta" />Knedla sa pršutom, rukolom i
+                    mocarelom, 120
+                    RSD<br />
+                    <input type="checkbox" id="knedla19" name="meksiko" value="meksiko" />Meksička knedla, 120 RSD<br />
+                    <input type="checkbox" id="knedla20" name="grcka" value="grcka" />Grčka knedla, 120 RSD<br />
+                    <br />
+                    Da li preferirate slane ili slatke knedle? (opciono)<br />
+                    <select name="favorite">
+                        <option value="">Označite omiljene</option>
+                        <option value="drip">slane knedle</option>
+                        <option value="french">slatke knedle</option>
+
+                    </select>
+
+                    <br /><br /><br />
+
+                    <input type="submit" value="Poručite" /> <br />
+                </fieldset>
+
+            </form>
+
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <div id="snowspawner"></div>
+</body>
+
+</html>
